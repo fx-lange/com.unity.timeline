@@ -75,10 +75,14 @@ namespace UnityEngine.Timeline
             if (m_timeControl == null)
                 return;
 
-            if (m_started)
+            if (m_started) 
             {
-                m_timeControl.OnControlTimeStop();
-                m_started = false;
+                //making sure pause doesn't trigger stop
+                if (info.effectiveWeight == 0f)
+                {
+                    m_timeControl.OnControlTimeStop();
+                    m_started = false;
+                }
             }
         }
     }
