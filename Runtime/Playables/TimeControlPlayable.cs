@@ -45,7 +45,7 @@ namespace UnityEngine.Timeline
         {
             Debug.Assert(m_started, "PrepareFrame has been called without OnControlTimeStart being called first.");
             if (m_timeControl != null)
-                m_timeControl.SetTime(playable.GetTime());
+                m_timeControl.SetTime(playable.GetTime(), playable.GetDuration());
         }
 
         /// <summary>

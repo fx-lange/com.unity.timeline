@@ -12,7 +12,7 @@ namespace UnityEngine.Timeline
         /// Called each frame the Timeline clip is active.
         /// </summary>
         /// <param name="time">The local time of the associated Timeline clip.</param>
-        void SetTime(double time);
+        void SetTime(double time, double duration);
 
         /// <summary>
         /// Called when the associated Timeline clip becomes active.
